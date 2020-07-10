@@ -1,0 +1,27 @@
+---
+- name: yum install httpd
+  yum:
+    name:
+      - httpd
+    state: latest
+- name: start service httpd and enable it
+  service:
+    name: httpd
+    state: started
+    enabled: True
+
+- name: copy site
+  copy:
+    src: /tmp/site.tgz
+    dest: /tmp
+
+
+- name: unarch
+  unarchive:
+    src: /tmp/site.tgz
+    dest: /var/www/html
+
+- name: remove arc from tmp
+  file:
+    path: /tmp/site.tgz
+    state: absent

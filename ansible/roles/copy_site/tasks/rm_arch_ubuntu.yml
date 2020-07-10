@@ -1,0 +1,5 @@
+---
+- name: remove arch from tmp
+  file:
+    path: /tmp/site.tgz
+    state: absent

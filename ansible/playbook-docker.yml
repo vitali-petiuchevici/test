@@ -1,0 +1,6 @@
+---
+ - hosts: linux
+   become: yes
+   roles:
+#     - install_docker
+      - run_docker_packages

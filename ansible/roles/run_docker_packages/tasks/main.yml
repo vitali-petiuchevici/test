@@ -1,0 +1,11 @@
+---
+# tasks file for run_docker_packages
+
+
+#- import_tasks: install_docker_amazon.yml
+#  when: ansible_pkg_mgr == "yum"
+#- import_tasks: run_docker_ubuntu.yml
+#  when: ansible_pkg_mgr == "apt"
+- import_tasks: info_docker_ubuntu.yml
+  when: ansible_pkg_mgr == "apt"
+

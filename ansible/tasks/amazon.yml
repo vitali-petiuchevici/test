@@ -1,0 +1,13 @@
+---
+- name: yum install
+  yum:
+    name:
+      - docker
+      - httpd
+      - tcpdump
+    state: latest
+- name: start service httpd and enable it
+  service:
+    name: httpd
+    state: started
+    enabled: True

@@ -1,0 +1,9 @@
+---
+# tasks file for copy site
+
+- import_tasks: arc_ubuntu.yml
+  when: ansible_pkg_mgr == "apt"
+- import_tasks: copy_amazon.yml
+  when: ansible_pkg_mgr == "yum"
+- import_tasks: rm_arch_ubuntu.yml
+  when: ansible_pkg_mgr == "apt"

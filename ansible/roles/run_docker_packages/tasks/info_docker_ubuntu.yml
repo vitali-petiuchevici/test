@@ -1,0 +1,4 @@
+---
+- name: Inspect a single image
+  docker_image:
+    name: mydata

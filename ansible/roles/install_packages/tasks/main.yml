@@ -1,0 +1,7 @@
+---
+# tasks file for install_packages
+
+- import_tasks: amazon.yml
+  when: ansible_pkg_mgr == "yum"
+- import_tasks: ubuntu.yml
+  when: ansible_pkg_mgr == "apt"

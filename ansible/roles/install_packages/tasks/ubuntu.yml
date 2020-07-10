@@ -1,0 +1,13 @@
+---
+- name: apt install
+  apt:
+    name:
+      - docker
+      - apache2
+      - tcpdump
+    state: latest
+- name: start service apache2 and enable it.
+  service:
+    name: apache2
+    state: started
+    enabled: True

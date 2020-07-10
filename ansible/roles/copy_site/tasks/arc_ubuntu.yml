@@ -1,0 +1,12 @@
+---
+- name: Compress directory
+  archive:
+    path: /var/www/html/
+    dest: /tmp/site.tgz
+
+#- name: copy site
+ # copy:
+#    src: /tmp/site.tgz
+#    dest: /var/www/html
+
+
